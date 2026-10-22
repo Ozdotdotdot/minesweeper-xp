@@ -1,0 +1,14 @@
+{
+  "1": "Minesweeper",
+  "3": "Minesweeper Error",
+  "4": "Unable to allocate a timer.  Please exit some of your applications and try again.",
+  "5": "Out of Memory",
+  "6": "Error: %d",
+  "7": "%d seconds",
+  "8": "Anonymous",
+  "9": "You have the fastest time\rfor beginner level.\rPlease enter your name.",
+  "10": "You have the fastest time\rfor intermediate level.\rPlease enter your name.",
+  "11": "You have the fastest time\rfor expert level.\rPlease enter your name.",
+  "12": "Minesweeper",
+  "13": "by Robert Donner and Curt Johnson"
+}

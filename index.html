@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minesweeper</title>
+  <meta name="description" content="Windows XP Minesweeper, ported to the browser from the original WINMINE.EXE.">
+  <link rel="icon" href="assets/winmine.ico" sizes="16x16 32x32 48x48">
+  <link rel="apple-touch-icon" href="assets/icon48.png">
+  <meta property="og:title" content="Minesweeper">
+  <meta property="og:description" content="Windows XP Minesweeper, reverse-engineered from WINMINE.EXE and rebuilt for the browser.">
+  <meta property="og:image" content="assets/icon48.png">
+  <link rel="stylesheet" href="css/xp.css">
+  <script type="module" src="js/shell.js"></script>
+</head>
+<body>
+  <main id="desktop">
+    <button id="desktop-icon" class="desktop-icon" type="button" title="Double-click to play">
+      <img src="assets/icon48.png" alt="" width="48" height="48">
+      <span>Minesweeper</span>
+    </button>
+
+    <section id="window" class="xp-window main-window" aria-label="Minesweeper" hidden>
+      <div class="title-bar">
+        <img class="title-icon" src="assets/icon16.png" alt="" width="16" height="16">
+        <span class="title-text">Minesweeper</span>
+        <div class="title-controls">
+          <button id="btn-minimize" class="ctl minimize" aria-label="Minimize"></button>
+          <button class="ctl maximize" aria-label="Maximize" disabled></button>
+          <button id="btn-close" class="ctl close" aria-label="Close"></button>
+        </div>
+      </div>
+      <nav class="menu-bar">
+        <div class="menu">
+          <button class="menu-label" type="button"><u>G</u>ame</button>
+          <ul class="menu-items">
+            <li data-cmd="new"><u>N</u>ew<kbd>F2</kbd></li>
+            <li class="sep"></li>
+            <li data-cmd="level" data-level="0"><u>B</u>eginner</li>
+            <li data-cmd="level" data-level="1"><u>I</u>ntermediate</li>
+            <li data-cmd="level" data-level="2"><u>E</u>xpert</li>
+            <li data-cmd="level" data-level="3"><u>C</u>ustom...</li>
+            <li class="sep"></li>
+            <li data-cmd="marks"><u>M</u>arks (?)</li>
+            <li data-cmd="color">Co<u>l</u>or</li>
+            <li data-cmd="sound"><u>S</u>ound</li>
+            <li class="sep"></li>
+            <li data-cmd="best">Best <u>T</u>imes...</li>
+            <li class="sep"></li>
+            <li data-cmd="exit">E<u>x</u>it</li>
+          </ul>
+        </div>
+        <div class="menu">
+          <button class="menu-label" type="button"><u>H</u>elp</button>
+          <ul class="menu-items">
+            <li data-cmd="help"><u>C</u>ontents<kbd>F1</kbd></li>
+            <li data-cmd="search"><u>S</u>earch for Help on...</li>
+            <li data-cmd="usinghelp">Using <u>H</u>elp</li>
+            <li class="sep"></li>
+            <li data-cmd="about"><u>A</u>bout Minesweeper...</li>
+          </ul>
+        </div>
+      </nav>
+      <canvas id="board" width="168" height="211"></canvas>
+    </section>
+
+    <div id="dialogs"></div>
+  </main>
+
+  <footer id="taskbar">
+    <span class="start"><span>start</span></span>
+    <button id="task-button" class="task-button active" type="button">
+      <img src="assets/icon16.png" alt="" width="16" height="16"><span>Minesweeper</span>
+    </button>
+    <a class="tray" href="https://github.com/Ozdotdotdot/minesweeper-xp" target="_blank" rel="noopener">Source</a>
+  </footer>
+
+  <div id="cheat-pixel" hidden></div>
+</body>
+</html>
